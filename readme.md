@@ -34,10 +34,11 @@ We thank the maintainers of the following projects that enable us to develop `K-
 
 If you find this work is useful for your research, please consider citing:
 ```
-@article{paek2021mixer,
-  title={Mixer-based lidar lane detection network and dataset for urban roads},
-  author={Paek, Donghee and Kong, Seung-Hyun and Wijaya, Kevin Tirta},
-  journal={arXiv preprint arXiv:2110.11048},
-  year={2021}
+@InProceedings{paek2022klane,
+  title     = {K-Lane: Lidar Lane Dataset and Benchmark for Urban Roads and Highways},
+  author    = {Paek, Dong-Hee and Kong, Seung-Hyun and Wijaya, Kevin Tirta},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+  month     = {June},
+  year      = {2022}
 }
 ```
