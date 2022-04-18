@@ -38,7 +38,7 @@ KLaneDet
 ```
 ![image](./docs/imgs/download_manual.png)
 
-# Requirements
+## Requirements
 1. Clone the repository
 ```
 git clone ...
@@ -49,7 +49,7 @@ git clone ...
 pip install -r requirements.txt
 ```
 
-# Training Testing
+## Training Testing
 * To test from a pretrained model download the pretrained model from our Google Drive <a href="https://en.wikipedia.org/wiki/Hobbit#Lifestyle" title="K-Lane Dataset">Model</a> and run
 ```
 python validate.py ...
@@ -74,7 +74,7 @@ python validate.py ...
 `K-Lane` is released under the MIT License
 
 ## Acknowledgement
-The K-lane benchmark is made by `Donghee Paek`, `Kevin Tirta Wijaya`, `Dongin Kim`, and `Minhyeok Sun`, supervised by `Seunghyun Kong`
+The K-lane benchmark is contributed by `Dong-Hee Paek`, `Kevin Tirta Wijaya`, `Dong-In Kim`, and `Min-Hyeok Sun`, supervised by `Seung-Hyun Kong`.
 
 We thank the maintainers of the following projects that enable us to develop `K-Lane`:
 * [`OpenPCDet`](https://github.com/open-mmlab/OpenPCDet) by MMLAB
