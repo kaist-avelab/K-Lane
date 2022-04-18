@@ -74,7 +74,7 @@ python validate.py ...
 `K-Lane` is released under the MIT License
 
 ## Acknowledgement
-The K-lane benchmark is contributed by `Dong-Hee Paek`, `Kevin Tirta Wijaya`, `Dong-In Kim`, and `Min-Hyeok Sun`, advised by `Seung-Hyun Kong`.
+The K-lane benchmark is contributed by `Dong-Hee Paek` and `Kevin Tirta Wijaya`, advised by `Seung-Hyun Kong`.
 
 We thank the maintainers of the following projects that enable us to develop `K-Lane`:
 * [`OpenPCDet`](https://github.com/open-mmlab/OpenPCDet) by MMLAB
