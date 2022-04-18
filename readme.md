@@ -6,7 +6,7 @@
 ## Overview 
 1. [K-Lane Detection Frameworks](./docs/KLane.md)
       * [Requirements](./docs/KLane.md#Requirements)
-      * [Workspace Arrangement](./docs/KLane.md#Workspace-Arrangement)
+      * [Getting Started](./docs/KLane.md#Workspace-Arrangement)
       * [Training and Testing with K-Lane](./docs/KLane.md#Training-Testing)
 2. [Visualization Tool](./docs/visualization.md)
       * [Requirements](./docs/visualization.md#Requirements)
