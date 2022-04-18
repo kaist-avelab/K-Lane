@@ -19,7 +19,7 @@
       * [Labelling a Point Cloud](./docs/annotation.md#Labelling-a-Point-Cloud)
 
 ## Updates
-* [2021-09-11] v1.0.0 is released
+* [2022-04-18] v1.0.0 is released along with the K-Lane Dataset. Please check [Getting Started](./docs/KLane.md#Workspace-Arrangement) for the download instruction.
 
 ## License
 `K-Lane` is released under the MIT License
