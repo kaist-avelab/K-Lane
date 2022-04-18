@@ -2,6 +2,7 @@
 
 
 `K-Lane` is the world's first open LiDAR lane detection frameworks that provides a dataset with wide range of driving scenarios in an urban environment. This repository provides the `K-Lane` frameworks, annotation tool for lane labelling, and the visualization tool for showing the inference results and calibrating the sensors.
+![image](./docs/imgs/klane_examples.png)
 
 # K-Lane Detection Frameworks
 This is the documentation for how to use our detection frameworks with K-Lane dataset.
@@ -10,18 +11,6 @@ We tested the K-Lane detection frameworks on the following environment:
 * Ubuntu 18.04
 * Torch 1.7.1
 * CUDA 11.2
-
-
-# Requirements
-1. Clone the repository
-```
-git clone ...
-```
-
-2. Install the dependencies
-```
-pip install -r requirements.txt
-```
 
 # Preparing the Data
 1. To download the dataset, log in to <a href="https://kaistavelab.direct.quickconnect.to:54568/"> our server </a> with the following credentials: 
@@ -45,6 +34,17 @@ KLaneDet
 ├── logs
 ```
 ![image](./docs/imgs/download_manual.png)
+
+# Requirements
+1. Clone the repository
+```
+git clone ...
+```
+
+2. Install the dependencies
+```
+pip install -r requirements.txt
+```
 
 # Training Testing
 * To test from a pretrained model download the pretrained model from our Google Drive <a href="https://en.wikipedia.org/wiki/Hobbit#Lifestyle" title="K-Lane Dataset">Model</a> and run
