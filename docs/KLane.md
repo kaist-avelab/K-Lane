@@ -18,9 +18,13 @@ git clone ...
 pip install -r requirements.txt
 ```
 
-# Workspace Arrangement
-1. Download the dataset from our Google Drive <a href="https://en.wikipedia.org/wiki/Hobbit#Lifestyle" title="K-Lane Dataset">K-Lane Dataset</a>
-2. Workspace directory structure:
+# Getting Started
+1. To download the dataset, log in to <a href="https://kaistavelab.direct.quickconnect.to:54568/"> our server </a> with the following credentials: 
+      ID       : klaneds
+      Password : Klane2022
+2. Go to the "File Station" folder, and download the dataset by right-click --> download.
+   Note for Ubuntu user, there might be some error when unzipping the files. Please check the "readme_to_unzip_file_in_linux_system.txt".
+3. After all files are downloaded, please arrange the workspace directory with the following structure:
 ```
 KLaneDet
 ├── annot_tool
@@ -38,8 +42,7 @@ KLaneDet
 
 # Training Testing
 * To test from a pretrained model download the pretrained model from our Google Drive <a href="https://en.wikipedia.org/wiki/Hobbit#Lifestyle" title="K-Lane Dataset">Model</a> and run
-* Testing can be done either with the python script or the GUI visualization tool. To test with the python script, run
 ```
 python validate.py ...
 ```
-* To test with the GUI visualization tool, please refer to the <a href = "https://github.com/..." title="Visualization Tool"> visualization tool page </a>
+* Testing can be done either with the python script or the GUI visualization tool. To test with the GUI visualization tool, please refer to the <a href = "https://github.com/..." title="Visualization Tool"> visualization tool page </a>
