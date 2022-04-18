@@ -33,7 +33,7 @@ KLaneDet
             ├── train
                   ├── seq_1
                   :
-                  ├── seq_5 
+                  ├── seq_15 
 ├── logs
 ```
 ![image](./docs/imgs/download_manual.png)
