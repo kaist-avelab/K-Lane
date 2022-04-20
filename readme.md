@@ -23,7 +23,7 @@ We tested the K-Lane detection frameworks on the following environment:
    Note for Ubuntu user, there might be some error when unzipping the files. Please check the "readme_to_unzip_file_in_linux_system.txt".
 3. After all files are downloaded, please arrange the workspace directory with the following structure:
 ```
-KLaneDet
+KLaneTools
 ├── annot_tool
 ├── baseline 
 ├── configs
@@ -39,10 +39,9 @@ KLaneDet
 ![image](./docs/imgs/download_manual.png)
 
 ---
-## The development kits (training, evaluation code, annotation and visualization tools) are published soon via this repository! (until the end of April)
+# The total development kits for K-Lane (training, evaluation code, annotation and visualization tools) are published soon via this repository! (until the end of April)
 
 ## Requirements
-<!-- <strong>The development kits (training, evaluation code, annotation and visualization tools) are published soon! (in a week)</strong> -->
 
 1. Clone the repository
 ```
@@ -76,7 +75,7 @@ python validate.py ...
 * [2022-04-18] v1.0.0 is released along with the K-Lane Dataset. Please check [Getting Started](./docs/KLane.md#Workspace-Arrangement) for the download instruction.
 
 ## License
-`K-Lane` is released under the MIT License
+`K-Lane` is released under the Apache-2.0 license.
 
 ## Acknowledgement
 The K-lane benchmark is contributed by `Dong-Hee Paek` and `Kevin Tirta Wijaya`, advised by `Seung-Hyun Kong`.
