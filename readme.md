@@ -39,7 +39,7 @@ KLaneDet
 ![image](./docs/imgs/download_manual.png)
 
 ---
-## The development kits (training, evaluation code, annotation and visualization tools) are published soon! (until the end of April)
+## The development kits (training, evaluation code, annotation and visualization tools) are published soon via this repository! (until the end of April)
 
 ## Requirements
 <!-- <strong>The development kits (training, evaluation code, annotation and visualization tools) are published soon! (in a week)</strong> -->
