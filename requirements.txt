@@ -1,0 +1,13 @@
+open3d==0.15.2
+opencv-python==4.2.0.32
+PyQt5==5.15.6
+PyQt5-Qt5==5.15.2
+PyQt5-sip==12.10.1
+python_qt_binding==0.4.4
+yapf==0.32.0
+einops==0.4.1
+
+### Following lines are examples of installing torch (run these lines your terminal with 'pip install') ###
+# torch==1.7.1+cu110 -f https://download.pytorch.org/whl/torch_stable.html
+# torchvision==0.8.2+cu110 -f https://download.pytorch.org/whl/torch_stable.html
+# pytorch-warmup==0.1.0
