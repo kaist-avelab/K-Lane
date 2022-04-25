@@ -11,7 +11,6 @@ conda create -n #env-name python=3.7
 3. Install the dependencies
 ```
 pip install PyQt5 pyaml rospkg numpy tensorflow==1.15 opencv-python-headless
-
 ```
    * note: installing opencv-python with PyQt5 may result in xcb error
 
