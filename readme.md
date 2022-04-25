@@ -82,7 +82,7 @@ python validate_gpu_0.py ...
 `K-Lane` is released under the Apache-2.0 license.
 
 ## Acknowledgement
-The K-lane benchmark is contributed by `Dong-Hee Paek` and `Kevin Tirta Wijaya`, advised by `Seung-Hyun Kong`.
+The K-lane benchmark is contributed by `Dong-Hee Paek`, `Kevin Tirta Wijaya`, 'Dong-In Kim', and 'Min-Hyeok Sun', advised by `Seung-Hyun Kong`.
 
 We thank the maintainers of the following projects that enable us to develop `K-Lane`:
 * [`OpenPCDet`](https://github.com/open-mmlab/OpenPCDet) by MMLAB
