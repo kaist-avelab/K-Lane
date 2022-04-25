@@ -1,3 +1,4 @@
+<img src = "./docs/imgs/klane_logo_ver2.png" width="60%">
 ![image](./docs/imgs/klane_logo_ver2.png)
 
 
