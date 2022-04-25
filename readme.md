@@ -64,6 +64,9 @@ python validate_gpu_0.py ...
 * Testing can be done either with the python script or the GUI visualization tool. To test with the GUI visualization tool, please refer to the <a href = "https://github.com/..." title="Visualization Tool"> visualization tool page </a>
 *  Youtube Link (TBD)
 
+## Model Zoo
+(TBD)
+
 ## Development Kit 
 1. [Visualization Tool](./docs/visualization.md)
       * [Requirements](./docs/visualization.md#Requirements)
@@ -86,9 +89,6 @@ The K-lane benchmark is contributed by `Dong-Hee Paek`, `Kevin Tirta Wijaya`, `D
 
 We thank the maintainers of the following projects that enable us to develop `K-Lane`:
 [`OpenPCDet`](https://github.com/open-mmlab/OpenPCDet) by MMLAB, [`TuRoad`](https://github.com/Turoad/lanedet) bu TuZheng
-
-## Model Zoo
-(TBD)
 
 ## Citation
 
