@@ -57,7 +57,7 @@ pip install -r requirements.txt
 ```
 
 ## Training Testing
-* To test from a pretrained model (e.g., Proj28_GFC-T3_RowRef_82_73.pth), download the pretrained model from our Google Drive <a href="https://en.wikipedia.org/wiki/Hobbit#Lifestyle" title="K-Lane Dataset">Model</a> and run
+* To test from a pretrained model (e.g., Proj28_GFC-T3_RowRef_82_73.pth), download the pretrained model from our Google Drive <a href="https://en.wikipedia.org/" title="K-Lane Dataset">Model</a> and run
 ```
 python validate_gpu_0.py ...
 ```
