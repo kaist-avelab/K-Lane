@@ -36,7 +36,9 @@ KLaneTools
             ├── train
                   ├── seq_1
                   :
-                  ├── seq_15 
+                  ├── seq_15
+            ├── description_frames_test.txt
+            ├── description_test_lightcurve.txt
 ├── logs
 ```
 ![image](./docs/imgs/download_manual.png)
