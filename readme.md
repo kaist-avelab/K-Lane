@@ -16,7 +16,7 @@ We tested the K-Lane detection frameworks on the following environment:
 * Torch 1.7.1
 * CUDA 11.2
 
-# Preparing the Dataset
+## Preparing the Dataset
 1. To download the dataset, log in to <a href="https://kaistavelab.direct.quickconnect.to:54568/"> our server </a> with the following credentials: 
       ID       : klaneds
       Password : Klane2022
@@ -44,7 +44,6 @@ KLaneTools
 ```
 ![image](./docs/imgs/download_manual.png)
 
----
 <!-- # The total development kits for K-Lane (training, evaluation code, annotation and visualization tools) are published soon via this repository! (until the end of April) -->
 
 ## Requirements
