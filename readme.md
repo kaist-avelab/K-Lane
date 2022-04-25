@@ -1,4 +1,4 @@
-![image](./docs/imgs/logo_high_resolution.png)
+![image](./docs/imgs/klane_logo_ver2.png)
 
 
 `K-Lane` is the world's first open LiDAR lane detection frameworks that provides a dataset with wide range of driving scenarios in an urban environment. This repository provides the `K-Lane` frameworks, annotation tool for lane labelling, and the visualization tool for showing the inference results and calibrating the sensors.
