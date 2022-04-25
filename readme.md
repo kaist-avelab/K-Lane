@@ -1,7 +1,7 @@
 ![image](./docs/imgs/klane_logo_ver2.png)
 
 
-`K-Lane` (KAIST-Lane provided by `AVELab`(http://ave.kaist.ac.kr/)) is the world's first open LiDAR lane detection frameworks that provides a dataset with wide range of driving scenarios in an urban environment. This repository provides the `K-Lane` frameworks, annotation tool for lane labelling, and the visualization tool for showing the inference results and calibrating the sensors.
+`K-Lane` (KAIST-Lane provided by [`AVELab`](http://ave.kaist.ac.kr/)) is the world's first open LiDAR lane detection frameworks that provides a dataset with wide range of driving scenarios in an urban environment. This repository provides the `K-Lane` frameworks, annotation tool for lane labelling, and the visualization tool for showing the inference results and calibrating the sensors.
 
 
 ![image](./docs/imgs/klane_examples.png)
