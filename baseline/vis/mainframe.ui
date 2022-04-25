@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1290</width>
+    <height>598</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="pushButton_load">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>1</y>
+     <width>81</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Load</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_logo">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>180</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>#logo</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="textBrowser_logs">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>400</y>
+     <width>281</width>
+     <height>191</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget_file">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>70</y>
+     <width>281</width>
+     <height>331</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>991</width>
+     <height>521</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab_1">
+    <attribute name="title">
+     <string>LiDAR Lane Detection</string>
+    </attribute>
+    <widget class="QLabel" name="label_front_img_1">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>768</width>
+       <height>480</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>#front image</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_lane_label_1">
+     <property name="geometry">
+      <rect>
+       <x>770</x>
+       <y>20</y>
+       <width>216</width>
+       <height>216</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>#label</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_label_1">
+     <property name="geometry">
+      <rect>
+       <x>770</x>
+       <y>0</y>
+       <width>91</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>* Label</string>
+     </property>
+    </widget>
+    <widget class="QTextBrowser" name="textBrowser_metric">
+     <property name="geometry">
+      <rect>
+       <x>770</x>
+       <y>270</y>
+       <width>211</width>
+       <height>211</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_metric">
+     <property name="geometry">
+      <rect>
+       <x>770</x>
+       <y>250</y>
+       <width>91</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>* Metric</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Calibration Tool</string>
+    </attribute>
+    <widget class="QLabel" name="label_front_img_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>768</width>
+       <height>480</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>#front image</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_lane_label_2">
+     <property name="geometry">
+      <rect>
+       <x>770</x>
+       <y>20</y>
+       <width>216</width>
+       <height>216</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>#label</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_label_2">
+     <property name="geometry">
+      <rect>
+       <x>770</x>
+       <y>0</y>
+       <width>91</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>* Label</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_row_1">
+     <property name="geometry">
+      <rect>
+       <x>770</x>
+       <y>260</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="plainText">
+      <string>2350.,0.,1004.</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_intrinsic_params">
+     <property name="geometry">
+      <rect>
+       <x>770</x>
+       <y>240</y>
+       <width>131</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>* Intrinsic Params</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_row_2">
+     <property name="geometry">
+      <rect>
+       <x>770</x>
+       <y>290</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="plainText">
+      <string>0.,1200.,590.</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_extrinsic_params">
+     <property name="geometry">
+      <rect>
+       <x>770</x>
+       <y>330</y>
+       <width>131</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>* Extrinsic Params</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_row_3">
+     <property name="geometry">
+      <rect>
+       <x>770</x>
+       <y>350</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="plainText">
+      <string>6.0,11.3,0.45</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_row_4">
+     <property name="geometry">
+      <rect>
+       <x>770</x>
+       <y>380</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="plainText">
+      <string>0.2,-0.3,-0.7</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_dim_1">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>260</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>[pixel/m]</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_dim_2">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>290</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>[pixel/m]</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_dim_3">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>350</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>[degree]</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_dim_4">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>380</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>[m]</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_calibrate">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>420</y>
+       <width>201</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Calibrate</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_save_calibration">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>440</y>
+       <width>201</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save Calibration</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_calibration_pre">
+     <property name="geometry">
+      <rect>
+       <x>780</x>
+       <y>470</y>
+       <width>201</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Calibrate pre-defined</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Adding Description per Frame</string>
+    </attribute>
+    <widget class="QLabel" name="label_front_img_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>480</width>
+       <height>300</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>#front image</string>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_desc">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>300</y>
+       <width>661</width>
+       <height>191</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_description">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>65</y>
+       <width>141</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>* Label Description</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_des_curve">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>120</y>
+       <width>92</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Curve</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_txt_file_name">
+     <property name="geometry">
+      <rect>
+       <x>810</x>
+       <y>260</y>
+       <width>171</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>* description_frame.txt</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_load_desc">
+     <property name="geometry">
+      <rect>
+       <x>800</x>
+       <y>280</y>
+       <width>89</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Load txt</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_save_desc">
+     <property name="geometry">
+      <rect>
+       <x>890</x>
+       <y>280</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save txt</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_add_desc">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>275</y>
+       <width>121</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Add Description</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_scene_timestamp">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>10</y>
+       <width>141</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>* Scene Timestamp</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_timestamp">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>30</y>
+       <width>221</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>#timestamp</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_num_lanes">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>95</y>
+       <width>181</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Number of Lanes (label) =</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_lane_label_3">
+     <property name="geometry">
+      <rect>
+       <x>770</x>
+       <y>20</y>
+       <width>216</width>
+       <height>216</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>#label</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_label_3">
+     <property name="geometry">
+      <rect>
+       <x>770</x>
+       <y>0</y>
+       <width>91</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>* Label</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_num_lanes">
+     <property name="geometry">
+      <rect>
+       <x>680</x>
+       <y>94</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>2</number>
+     </property>
+     <property name="maximum">
+      <number>6</number>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_des_merging">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>140</y>
+       <width>81</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Merging</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_des_occ_0">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>120</y>
+       <width>112</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Occ_&amp;0</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_des_occ_1">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>140</y>
+       <width>112</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Occ_&amp;1</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_des_occ_2">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>160</y>
+       <width>111</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Occ_&amp;2</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_des_daylight">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>170</y>
+       <width>91</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Daylight</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_des_night">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>190</y>
+       <width>91</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Night</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_des_urban">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>220</y>
+       <width>91</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Urban</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_des_highway">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>240</y>
+       <width>91</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Highway</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_des_occ_3">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>180</y>
+       <width>111</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Occ_&amp;3</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_des_occ_4">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>200</y>
+       <width>111</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Occ_&amp;4</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_des_occ_5">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>220</y>
+       <width>111</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Occ_&amp;5</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_des_occ_6">
+     <property name="geometry">
+      <rect>
+       <x>640</x>
+       <y>240</y>
+       <width>111</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Occ_&amp;6</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>740</x>
+       <y>90</y>
+       <width>3</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_2">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>90</y>
+       <width>3</width>
+       <height>180</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_3">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>270</y>
+       <width>250</width>
+       <height>3</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="Line" name="line_4">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
+       <y>90</y>
+       <width>250</width>
+       <height>3</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit_desc_light_curve">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>300</y>
+       <width>331</width>
+       <height>191</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_light_curve">
+     <property name="geometry">
+      <rect>
+       <x>660</x>
+       <y>275</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>light curve</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton_load_config">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>10</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Load config</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_pointcloud">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>40</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pointcloud</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_inference">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>10</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Inference</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_load_ckpt">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>10</y>
+     <width>111</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Load ckpt</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>12</y>
+     <width>91</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>* Network :</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>40</y>
+     <width>101</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>* Pointcloud :</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_pc_conf">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>40</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Confidence</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_pc_cls">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>40</y>
+     <width>111</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Classification</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_inline">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>40</y>
+     <width>131</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Visualize in line</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_vis_inference">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>70</y>
+     <width>201</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Show all in new window</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_pc_label">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>40</y>
+     <width>61</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Label</string>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_test_1">
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>10</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>*1</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_training">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>20</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Trainin&amp;g</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_test">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>40</y>
+     <width>81</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&amp;Test</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_test_2">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>10</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>*2</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_test_3">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>10</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>*3</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_test_4">
+   <property name="geometry">
+    <rect>
+     <x>890</x>
+     <y>10</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>*4</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_test_5">
+   <property name="geometry">
+    <rect>
+     <x>940</x>
+     <y>10</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>*5</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_test_6">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>10</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>*6</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_test_7">
+   <property name="geometry">
+    <rect>
+     <x>1040</x>
+     <y>10</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>*7</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_test_8">
+   <property name="geometry">
+    <rect>
+     <x>1090</x>
+     <y>10</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>*8</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_vis_all">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>70</y>
+     <width>151</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Save all infer imgs</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
