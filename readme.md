@@ -51,7 +51,7 @@ KLaneTools
 git clone ...
 ```
 
-2. Install the dependencies
+2. Install the dependencies (TBD)
 ```
 pip install -r requirements.txt
 ```
@@ -62,6 +62,7 @@ pip install -r requirements.txt
 python validate_gpu_0.py ...
 ```
 * Testing can be done either with the python script or the GUI visualization tool. To test with the GUI visualization tool, please refer to the <a href = "https://github.com/..." title="Visualization Tool"> visualization tool page </a>
+*  Youtube Link (TBD)
 
 ## Development Kit 
 1. [Visualization Tool](./docs/visualization.md)
