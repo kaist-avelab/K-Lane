@@ -94,7 +94,9 @@ scheduler = dict(
 eval_ep = 1
 save_ep = 1
 
+### Setting Here ###
 dataset_path = '/media/donghee/HDD_0/KLane'
+### Setting Here ###
 dataset_type = 'KLane'
 dataset = dict(
     train=dict(
