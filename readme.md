@@ -45,7 +45,7 @@ KLaneTools
 ![image](./docs/imgs/download_manual.png)
 
 ---
-# The total development kits for K-Lane (training, evaluation code, annotation and visualization tools) are published soon via this repository! (until the end of April)
+<!-- # The total development kits for K-Lane (training, evaluation code, annotation and visualization tools) are published soon via this repository! (until the end of April) -->
 
 ## Requirements
 
@@ -69,7 +69,7 @@ python train_gpu_0.py ...
 python validate_gpu_0.py ...
 ```
 * Testing can be done either with the python script or the GUI visualization tool. To test with the GUI visualization tool, please refer to the <a href = "https://github.com/..." title="Visualization Tool"> visualization tool page </a>
-*  Youtube Link (TBD)
+*  Youtube Movie for 'How to use the GUI visualization tool' (TBD)
 
 ## Model Zoo
 (TBD)
