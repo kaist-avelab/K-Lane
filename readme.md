@@ -54,12 +54,16 @@ KLaneTools
 git clone ...
 ```
 
-2. Install the dependencies (TBD)
+2. Install the dependencies
 ```
 pip install -r requirements.txt
 ```
 
-## Training Testing
+## Training & Testing
+* To train the model, prepare the total dataset and run
+```
+python train_gpu_0.py ...
+```
 * To test from a pretrained model (e.g., Proj28_GFC-T3_RowRef_82_73.pth), download the pretrained model from our Google Drive <a href="https://drive.google.com/drive/folders/14QHSxbCsUEf0FYZIa3j_uMFcLmMDwQmB?usp=sharing" title="K-Lane Dataset">Model</a> and run
 ```
 python validate_gpu_0.py ...
