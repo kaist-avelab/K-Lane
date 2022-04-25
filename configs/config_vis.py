@@ -46,7 +46,7 @@ for lane_color in cls_lane_color:
     pc_rgb_cls.append(temp)
 
 ### Setting Dataset Path Here ###
-data_root = '/media/donghee/HDD_0/KLane'
+data_root = './data/KLane' #'/media/donghee/HDD_0/KLane'
 ### Setting Dataset Path Here ###
 
 if __name__ == '__main__':
