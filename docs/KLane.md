@@ -36,7 +36,7 @@ KLaneDet
             ├── train
                   ├── seq_1
                   :
-                  ├── seq_5 
+                  ├── seq_15 
 ├── logs
 ```
 
@@ -45,4 +45,4 @@ KLaneDet
 ```
 python validate.py ...
 ```
-* Testing can be done either with the python script or the GUI visualization tool. To test with the GUI visualization tool, please refer to the <a href = "https://github.com/..." title="Visualization Tool"> visualization tool page </a>
+* Testing can be done either with the python script or the GUI visualization tool. To test with the GUI visualization tool, please refer to the <a href = "./docs/visualization.md" title="Visualization Tool"> visualization tool page </a>
