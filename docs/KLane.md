@@ -41,7 +41,7 @@ KLaneDet
 ```
 
 # Training Testing
-* To test from a pretrained model download the pretrained model from our Google Drive <a href="https://en.wikipedia.org/wiki/Hobbit#Lifestyle" title="K-Lane Dataset">Model</a> and run
+* To test from a pretrained model download the pretrained model from our Google Drive <a href="" title="K-Lane Dataset">Model</a> and run
 ```
 python validate.py ...
 ```
