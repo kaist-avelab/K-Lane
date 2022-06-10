@@ -12,7 +12,7 @@ pip install -r requirements.txt
  
 
 # Workspace Arrangement
-1. Download the dataset from our Google Drive <a href="" title="K-Lane Dataset">K-Lane Dataset</a>
+1. Download the dataset from our server.
 2. Workspace directory structure:
 ```
 KLaneDet
