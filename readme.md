@@ -68,7 +68,7 @@ python train_gpu_0.py ...
 python validate_gpu_0.py ...
 ```
 * Testing can be done either with the python script or the GUI visualization tool. To test with the GUI visualization tool, please refer to the <a href = "https://github.com/..." title="Visualization Tool"> visualization tool page </a>
-*  Youtube Movie for 'How to use the GUI visualization tool & annotation tool' (TBD)
+*  Youtube Movie for 'How to use the annotation tool': https://www.youtube.com/watch?v=FQgXLigdgxY&t=12s
 
 ## Model Zoo
 (TBD)
