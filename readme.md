@@ -71,7 +71,7 @@ python validate_gpu_0.py ...
 *  Youtube Movie for 'How to use the annotation tool': https://www.youtube.com/watch?v=FQgXLigdgxY&t=12s
 
 ## Model Zoo
-(TBD)
+
 
 ## Development Kit 
 1. [Visualization Tool](./docs/visualization.md)
