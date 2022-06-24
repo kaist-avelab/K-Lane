@@ -9,7 +9,7 @@ void callback_pointcloud_lidar(const sensor_msgs::PointCloud2ConstPtr& msg_pc)
 
 	ros::Time time = msg_pc->header.stamp;
 	// ROS_INFO("sec = %d", time.sec);
-    // ROS_INFO("nsec = %d", time.nsec);
+    	// ROS_INFO("nsec = %d", time.nsec);
 	string time_in_string = to_string_with_sec_nsec(time.sec, time.nsec);
 
 	if(!is_img_data_inserted)
@@ -104,10 +104,10 @@ void callback_pointcloud_lidar(const sensor_msgs::PointCloud2ConstPtr& msg_pc)
 
 	int n_pc_num = p_pc_lidar->points.size();
 
-	// Hash map으로 데이터 생성
+	// Hash map
 	std::unordered_map<std::pair<uint32_t, uint32_t>, std::vector<PillarPoint>, IntPairHash> map;
 
-	// 필라 텐서 설계
+	// Pillar tensor
 	for(int i=0; i<n_pc_num; i++)
 	{
 		OusterPointType point_ouster = p_pc_lidar->points[i];
@@ -188,7 +188,7 @@ void callback_pointcloud_lidar(const sensor_msgs::PointCloud2ConstPtr& msg_pc)
 		y_mean /= pair.second.size();
 		z_mean /= pair.second.size();
 
-		// 점마다 mean에 대해 바꿔줌 (Z 포함)
+		// based on mean
 		for (auto& p: pair.second)
 		{
 			p.xc = p.x - x_mean;
@@ -200,7 +200,7 @@ void callback_pointcloud_lidar(const sensor_msgs::PointCloud2ConstPtr& msg_pc)
 		int n_pillar_y_idx = static_cast<int>(std::floor((y_mean - y_min) / y_step));
 		float z_mid = (z_max - z_min) * 0.5f;
 		
-		// m_indices 대입
+		// m_indices
 		ppIndices[pillarId][1] = n_pillar_x_idx;
 		ppIndices[pillarId][2] = n_pillar_y_idx;
 
@@ -233,7 +233,7 @@ void callback_pointcloud_lidar(const sensor_msgs::PointCloud2ConstPtr& msg_pc)
 				break;
 			}
 
-			// m_tensor에 대입
+			// m_tensor
 			pppTensor[pillarId][pointId][0] = p.x - (n_pillar_x_idx*x_step + x_min);
 			pppTensor[pillarId][pointId][1] = p.y - (n_pillar_y_idx*y_step + y_min);
 			pppTensor[pillarId][pointId][2] = p.z - z_mid;
@@ -248,7 +248,7 @@ void callback_pointcloud_lidar(const sensor_msgs::PointCloud2ConstPtr& msg_pc)
 		pillarId++;
 	}
 
-	// Pillar Tensor Msg 만들기
+	// Pillar Tensor Msg
 	msg_training_data.data_f.clear();
 	for(int i=0; i<n_max_pillars; i++)
 	{
@@ -323,7 +323,7 @@ void callback_pointcloud_lidar(const sensor_msgs::PointCloud2ConstPtr& msg_pc)
 	{
 		OusterPointType point_ouster = p_pc_lidar->points[i];
 
-		// Intensity Filtering 0~max_intensity -> 0~1, max_intensity~ -> 1 !!!!!!!!!!!!!!!!!!!!!!!
+		// Intensity Filtering 0~max_intensity -> 0~1, max_intensity~ -> 1
 		float intensity = point_ouster.intensity;
 		if(intensity >= max_intensity_input)
 			intensity = max_intensity_input;
@@ -377,7 +377,7 @@ void callback_pointcloud_lidar(const sensor_msgs::PointCloud2ConstPtr& msg_pc)
 		// cv::waitKey(0);
 	}
 
-	float max_intensity = 100.f; // 원래 100 // max_intensity는 Visualize와 학습용을 구별함
+	float max_intensity = 100.f; // 100
 	float red_intensity = max_intensity*0.1;
 	float green_intensity = max_intensity*0.3;
 	int red_radius = 2;
@@ -388,13 +388,13 @@ void callback_pointcloud_lidar(const sensor_msgs::PointCloud2ConstPtr& msg_pc)
 	{
 		OusterPointType point_ouster = p_pc_lidar->points[i];
 
-		// Intensity Filtering 0~max_intensity -> 0~1, max_intensity~ -> 1 !!!!!!!!!!!!!!!!!!!!!!!
+		// Intensity Filtering 0~max_intensity -> 0~1, max_intensity~ -> 1
 		float intensity = point_ouster.intensity;
 		if(intensity >= max_intensity)
 			intensity = max_intensity;
 
-		// Gray 위에 표시되도록 유도
-		if(intensity >= red_intensity) // gray로 표시
+		// Overlap in gray
+		if(intensity >= red_intensity) // gray
 		{
 			continue;
 		}
@@ -403,15 +403,15 @@ void callback_pointcloud_lidar(const sensor_msgs::PointCloud2ConstPtr& msg_pc)
 		unsigned char uc_intensity = static_cast<unsigned char>(std::floor(256.f*intensity/max_intensity));
 		unsigned char color[3] = {0, }; // BGR
 
-		if(intensity < red_intensity) // gray로 표시
+		if(intensity < red_intensity) // gray
 		{
 			color[0] = uc_intensity; color[1] = uc_intensity; color[2] = uc_intensity;
 		}
-		else if(intensity >= red_intensity && intensity < green_intensity) // blue로 표시
+		else if(intensity >= red_intensity && intensity < green_intensity) // blue
 		{
 			color[1] = uc_intensity;
 		}
-		else // 4/3 이상은 red로 표시
+		else // larger than 4/3 red
 		{
 			color[2] = uc_intensity;
 		}
@@ -434,13 +434,13 @@ void callback_pointcloud_lidar(const sensor_msgs::PointCloud2ConstPtr& msg_pc)
 	{
 		OusterPointType point_ouster = p_pc_lidar->points[i];
 
-		// Intensity Filtering 0~max_intensity -> 0~1, max_intensity~ -> 1 !!!!!!!!!!!!!!!!!!!!!!!
+		// Intensity Filtering 0~max_intensity -> 0~1, max_intensity~ -> 1
 		float intensity = point_ouster.intensity;
 		if(intensity >= max_intensity)
 			intensity = max_intensity;
 
-		// Gray 위에 표시되도록 유도
-		if(intensity < red_intensity || intensity >= green_intensity) // gray로 표시
+		// Gray
+		if(intensity < red_intensity || intensity >= green_intensity) // gray
 		{
 			continue;
 		}
@@ -449,7 +449,7 @@ void callback_pointcloud_lidar(const sensor_msgs::PointCloud2ConstPtr& msg_pc)
 		unsigned char uc_intensity = static_cast<unsigned char>(std::floor(256.f*intensity/max_intensity));
 		unsigned char color[3] = {0, }; // BGR
 
-		if(intensity < red_intensity) // gray로 표시
+		if(intensity < red_intensity) // gray
 		{
 			color[0] = uc_intensity; color[1] = uc_intensity; color[2] = uc_intensity;
 		}
@@ -457,7 +457,7 @@ void callback_pointcloud_lidar(const sensor_msgs::PointCloud2ConstPtr& msg_pc)
 		{
 			color[1] = uc_intensity;
 		}
-		else // 4/3 이상은 red로 표시
+		else
 		{
 			color[2] = uc_intensity;
 		}
@@ -478,13 +478,13 @@ void callback_pointcloud_lidar(const sensor_msgs::PointCloud2ConstPtr& msg_pc)
 	{
 		OusterPointType point_ouster = p_pc_lidar->points[i];
 
-		// Intensity Filtering 0~max_intensity -> 0~1, max_intensity~ -> 1 !!!!!!!!!!!!!!!!!!!!!!!
+		// Intensity Filtering 0~max_intensity -> 0~1, max_intensity~ -> 1
 		float intensity = point_ouster.intensity;
 		if(intensity >= max_intensity)
 			intensity = max_intensity;
 
-		// Gray 위에 표시되도록 유도
-		if(intensity < green_intensity) // gray로 표시
+		// Gray
+		if(intensity < green_intensity) // gray
 		{
 			continue;
 		}
@@ -493,7 +493,7 @@ void callback_pointcloud_lidar(const sensor_msgs::PointCloud2ConstPtr& msg_pc)
 		unsigned char uc_intensity = static_cast<unsigned char>(std::floor(256.f*intensity/max_intensity));
 		unsigned char color[3] = {0, }; // BGR
 
-		if(intensity < red_intensity) // gray로 표시
+		if(intensity < red_intensity) // gray
 		{
 			color[0] = uc_intensity; color[1] = uc_intensity; color[2] = uc_intensity;
 		}
@@ -501,7 +501,7 @@ void callback_pointcloud_lidar(const sensor_msgs::PointCloud2ConstPtr& msg_pc)
 		{
 			color[1] = uc_intensity;
 		}
-		else // 4/3 이상은 red로 표시
+		else
 		{
 			color[2] = uc_intensity;
 		}
