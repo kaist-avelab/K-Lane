@@ -6,7 +6,6 @@
 #include <lidar_msgs/Params.h>
 #include <lidar_msgs/PillarTensorTraining.h>
 
-// 이거 매우 중요!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #define PCL_NO_PRECOMPILE
 
 #include <pcl/conversions.h>
@@ -65,7 +64,6 @@ std::string to_string_with_precision(const T a_value, const int n = 5)
        return out.str();
 }
 
-// 섹은 6자리, 나노섹은 9자리
 std::string to_string_with_sec_nsec(const int sec, const int nsec, const int sec_len=6, const int nsec_len=9)
 {
        std::ostringstream ss_sec, ss_nsec;
@@ -172,17 +170,17 @@ int n_max_points_per_pillar = 32;
 int n_max_pillars = 20736; // 144*144 = 20736
 int n_in_features = 7;
 
-// Priority-based Sampling, 둘 다 키면 intensity 높은 순서로 정렬, 정렬된 거 사이에서 z 낮은 순으로 정렬
+// Priority-based Sampling
 bool is_sort_with_z = false;
 bool is_sort_with_intensity = false;
 
-// 오름차순 (z가 작은게 맨 앞)
+// Ascending order (the smallest is at the first)
 bool isSortWithZ(PillarPoint a, PillarPoint b)
 {
        return a.z < b.z;
 }
 
-// 내림차순 (intensity가 큰게 맨 앞)
+// Descending order (the largest is at the first)
 bool isSortWithIntensity(PillarPoint a, PillarPoint b)
 {
        return a.intensity > b.intensity;
