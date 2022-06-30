@@ -70,9 +70,9 @@ python validate_gpu_0.py ...
 
 ## Model Zoo
 |Name|Overall|Daylight|Night|Urban|Highway|Curve|Merging|Occ-0|
-|:---:|:---:|:---:|
-|LLDN-GFC (Seg)|오른쪽정렬|중앙정렬|
-|LLDN-GFC (Row)|오른쪽정렬|중앙정렬|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|LLDN-GFC (Seg)|||||||||
+|LLDN-GFC (Row)|||||||||
 
 ## Development Kit 
 1. [Visualization Tool](./docs/visualization.md)
