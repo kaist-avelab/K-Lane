@@ -24,7 +24,7 @@ We tested the K-Lane detection frameworks on the following environment:
    Note for Ubuntu user, there might be some error when unzipping the files. Please check the "readme_to_unzip_file_in_linux_system.txt".
 3. After all files are downloaded, please arrange the workspace directory with the following structure:
 ```
-KLaneTools
+KLaneFrameworks
 ├── annot_tool
 ├── baseline 
 ├── configs
@@ -43,8 +43,6 @@ KLaneTools
 ├── logs
 ```
 ![image](./docs/imgs/download_manual.png)
-
-<!-- # The total development kits for K-Lane (training, evaluation code, annotation and visualization tools) are published soon via this repository! (until the end of April) -->
 
 ## Requirements
 
