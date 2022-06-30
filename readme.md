@@ -69,10 +69,10 @@ python validate_gpu_0.py ...
 *  Youtube Movie for 'How to use the annotation tool': https://www.youtube.com/watch?v=FQgXLigdgxY&t=12s
 
 ## Model Zoo
-|Name|Overall|Daylight|Night|Urban|Highway|Curve|Merging|Occ-0|Occ-2|Occ-4~6|GFLOPs|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|LLDN-GFC (Seg)||||||||||||
-|LLDN-GFC (Row)||||||||||||
+|Name|Overall|Daylight|Night|Urban|Highway|Curve|Merging|Occ-0|Occ-2|Occ-4~6|GFLOPs|Model|Paper|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|LLDN-GFC|82.12|82.22|82.00|81.75|82.55|78.05|81.08|82.97|81.28|75.92|558.0|<a href="https://drive.google.com/drive/folders/14QHSxbCsUEf0FYZIa3j_uMFcLmMDwQmB?usp=sharing">Link</a>|<a href="https://openaccess.thecvf.com/content/CVPR2022W/WAD/papers/Paek_K-Lane_Lidar_Lane_Dataset_and_Benchmark_for_Urban_Roads_and_CVPRW_2022_paper.pdf">Link</a>|
+|RLLDN-LC|82.74|82.58|82.92|81.64|84.05|76.16|79.92|83.44|82.00|79.16|387.5|<a href="https://drive.google.com/drive/folders/14QHSxbCsUEf0FYZIa3j_uMFcLmMDwQmB?usp=sharing">Link</a>|Link|
 
 ## Development Kit 
 1. [Visualization Tool](./docs/visualization.md)
