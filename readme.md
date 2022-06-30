@@ -69,10 +69,10 @@ python validate_gpu_0.py ...
 *  Youtube Movie for 'How to use the annotation tool': https://www.youtube.com/watch?v=FQgXLigdgxY&t=12s
 
 ## Model Zoo
-|Name|Overall|Daylight|Night|Urban|Highway|Curve|Merging|Occ-0|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|LLDN-GFC (Seg)|||||||||
-|LLDN-GFC (Row)|||||||||
+|Name|Overall|Daylight|Night|Urban|Highway|Curve|Merging|Occ-0|Occ-2|Occ-4~6|GFLOPs|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|LLDN-GFC (Seg)||||||||||||
+|LLDN-GFC (Row)||||||||||||
 
 ## Development Kit 
 1. [Visualization Tool](./docs/visualization.md)
