@@ -29,8 +29,10 @@ def worker_init_fn(worker_id, seed):
 def build_dataloader(split_cfg, cfg, is_train=True):
     if is_train:
         shuffle = True
+        batch_size = cfg.batch_size
     else:
         shuffle = False
+        batch_size = 1
 
     dataset = build_dataset(split_cfg, cfg)
 
@@ -38,7 +40,7 @@ def build_dataloader(split_cfg, cfg, is_train=True):
             worker_init_fn, seed=cfg.seed)
     
     data_loader = torch.utils.data.DataLoader(
-        dataset, batch_size = cfg.batch_size, shuffle = shuffle,
+        dataset, batch_size = batch_size, shuffle = shuffle,
         num_workers = cfg.workers, pin_memory = False, drop_last = False,
         worker_init_fn=init_fn)
 
