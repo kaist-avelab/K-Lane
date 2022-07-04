@@ -29,10 +29,10 @@ def worker_init_fn(worker_id, seed):
 def build_dataloader(split_cfg, cfg, is_train=True):
     if is_train:
         shuffle = True
-        batch_size = cfg.batch_size
+        # batch_size = cfg.batch_size # uncomment when RuntimeError('each element in list of batch should be of equal size') happens
     else:
         shuffle = False
-        batch_size = 1
+        # batch_size = 1 # uncomment when RuntimeError('each element in list of batch should be of equal size') happens
 
     dataset = build_dataset(split_cfg, cfg)
 
@@ -40,8 +40,14 @@ def build_dataloader(split_cfg, cfg, is_train=True):
             worker_init_fn, seed=cfg.seed)
     
     data_loader = torch.utils.data.DataLoader(
-        dataset, batch_size = batch_size, shuffle = shuffle,
+        dataset, batch_size = cfg.batch_size, shuffle = shuffle,
         num_workers = cfg.workers, pin_memory = False, drop_last = False,
         worker_init_fn=init_fn)
+    
+    # replace line 42-45 when RuntimeError('each element in list of batch should be of equal size') happens
+    # data_loader = torch.utils.data.DataLoader(
+    #     dataset, batch_size = batch_size, shuffle = shuffle,
+    #     num_workers = cfg.workers, pin_memory = False, drop_last = False,
+    #     worker_init_fn=init_fn)
 
     return data_loader
