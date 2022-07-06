@@ -120,7 +120,10 @@ class KLane(Dataset):
             
             for desc in list_test_descriptions:
                 if desc[0] == time_string:
-                    temp_data_info['description'] = desc
+                    if self.cfg.is_eval_conditional:
+                        temp_data_info['description'] = desc
+                    else:
+                        temp_data_info['description'] = desc[-3:] # modified by Xiaoxin
                     break
 
             for idx, data_type in enumerate(self.list_data_type):
