@@ -129,6 +129,7 @@ class Runner(object):
                 self.validate(epoch)
 
     def validate(self, epoch=None, is_small=False, valid_samples=40):
+        self.cfg.is_eval_conditional = False
         if is_small:
             self.val_loader = build_dataloader(self.cfg.dataset.test, self.cfg, is_train=True)
         else:
@@ -468,6 +469,7 @@ class Runner(object):
     
     def eval_conditional(self, save_path = None):
         self.cfg.batch_size = 1
+        self.cfg.is_eval_conditional = True
         self.test_dataset = build_dataset(self.cfg.dataset.test, self.cfg)
         self.test_loader = build_dataloader(self.cfg.dataset.test, self.cfg, is_train=False)
 
