@@ -19,7 +19,7 @@ We tested the K-Lane detection frameworks on the following environment:
 ## Preparing the Dataset
 You can get a dataset in two different ways. One is about how to use our server, and the other is about how to use Google Drive.
 
-[1] Via our server
+* Via our server
 
 1. To download the dataset, log in to <a href="https://kaistavelab.direct.quickconnect.to:54568/"> our server </a> with the following credentials: 
       ID       : klaneds
@@ -47,17 +47,14 @@ KLaneFrameworks
 ├── logs
 ```
 
-[2] Via Google Drive Urls
+* Via Google Drive Urls
 
 Also, you can get the dataset through the following Google Drive urls.
 
-seq_01-04 : https://drive.google.com/drive/folders/1NE9DT8wZSbkL95Z9bQWm22EjGRb9SsYM?usp=sharing
-
-seq_05-12 : https://drive.google.com/drive/folders/1YBz5iaDLAcTH5IOjpaMrLt2iFu2m_Ui_?usp=sharing
-
-seq_13-14 : https://drive.google.com/drive/folders/1dUIYuOhnKwM1Uf5Q-nC0X0piCZFL8zCQ?usp=sharing
-
-seq_15,test,discription : https://drive.google.com/drive/folders/12aLITzR_tE8eVi-Q4OWoomX9VR3Olea7?usp=sharing
+1. seq_01-04 : https://drive.google.com/drive/folders/1NE9DT8wZSbkL95Z9bQWm22EjGRb9SsYM?usp=sharing
+2. seq_05-12 : https://drive.google.com/drive/folders/1YBz5iaDLAcTH5IOjpaMrLt2iFu2m_Ui_?usp=sharing
+3. seq_13-14 : https://drive.google.com/drive/folders/1dUIYuOhnKwM1Uf5Q-nC0X0piCZFL8zCQ?usp=sharing
+4. seq_15,test,discription : https://drive.google.com/drive/folders/12aLITzR_tE8eVi-Q4OWoomX9VR3Olea7?usp=sharing
 
 ![image](./docs/imgs/download_manual.png)
 
