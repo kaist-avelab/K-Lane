@@ -46,6 +46,7 @@ KLaneFrameworks
             ├── description_test_lightcurve.txt
 ├── logs
 ```
+![image](./docs/imgs/download_manual.png)
 
 * Via Google Drive Urls
 
@@ -55,8 +56,6 @@ Also, you can get the dataset through the following Google Drive urls.
 2. seq_05-12 : https://drive.google.com/drive/folders/1YBz5iaDLAcTH5IOjpaMrLt2iFu2m_Ui_?usp=sharing
 3. seq_13-14 : https://drive.google.com/drive/folders/1dUIYuOhnKwM1Uf5Q-nC0X0piCZFL8zCQ?usp=sharing
 4. seq_15,test,discription : https://drive.google.com/drive/folders/12aLITzR_tE8eVi-Q4OWoomX9VR3Olea7?usp=sharing
-
-![image](./docs/imgs/download_manual.png)
 
 ## Requirements
 
