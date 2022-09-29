@@ -79,7 +79,7 @@ python train_gpu_0.py ...
 python validate_gpu_0.py ...
 ```
 * Testing can be done either with the python script or the GUI visualization tool. To test with the GUI visualization tool, please refer to the <a href = "https://github.com/..." title="Visualization Tool"> visualization tool page </a>
-*  Youtube Movie for 'How to use the annotation tool': https://www.youtube.com/watch?v=FQgXLigdgxY&t=12s
+*  Youtube Movie for 'How to use the annotation tool': https://www.youtube.com/watch?v=RXa0_gWNvZU
 
 ## Model Zoo
 |Name|Overall|Daylight|Night|Urban|Highway|Curve|Merging|Occ-0|Occ-2|Occ-4~6|GFLOPs|Model|Paper|
