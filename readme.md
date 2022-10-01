@@ -119,7 +119,7 @@ If you find this work is useful for your research, please consider citing:
 @InProceedings{paek2022klane,
   title     = {K-Lane: Lidar Lane Dataset and Benchmark for Urban Roads and Highways},
   author    = {Paek, Dong-Hee and Kong, Seung-Hyun and Wijaya, Kevin Tirta},
-  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshop on Autonomous Driving (WAD)},
   month     = {June},
   year      = {2022}
 }
