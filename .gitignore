@@ -1,5 +1,5 @@
 # Ignore data and logs folders
-data/
+/data
 temp_data_zips/
 
 # Ignore everything in logs
