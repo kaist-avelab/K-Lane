@@ -11,16 +11,16 @@ import cv2
 import torch
 from glob import glob
 import pickle
-import open3d as o3d
+# import open3d as o3d
 from torch.utils.data import Dataset
 
 try:
-    from baseline.utils.pc_utils import *
+    from baseline.utils.pc_utils_no_o3d import *
     from baseline.datasets.registry import DATASETS
 except:
     import sys
     sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-    from baseline.utils.pc_utils import *
+    from baseline.utils.pc_utils_no_o3d import *
     from baseline.datasets.registry import DATASETS
 
 @DATASETS.register_module
@@ -111,7 +111,10 @@ class KLane(Dataset):
         for name_tensor_label in sorted(os.listdir(test_root)):
             temp_data_info = dict()
             time_string = self.get_time_string(name_tensor_label)
-            
+            print("name_tensor_label is", name_tensor_label, "end")
+            #print("time_string. is",time_string)
+            #print("list_time_string is", list_time_string)
+
             corresponding_idx = list_time_string.index(time_string)
 
             temp_data_info['bev_tensor_label'] = osp.join(test_root, name_tensor_label)
