@@ -162,6 +162,10 @@ class Runner(object):
             data = self.to_cuda(data)
             with torch.no_grad():
                 output = self.net(data)
+                
+                # New addition to see ground truth
+                # gt_label = data['label'][0].cpu().numpy() 
+                # print("gt_label patch:\n", gt_label[:5, :5])
 
                 lane_maps = output['lane_maps']
 
