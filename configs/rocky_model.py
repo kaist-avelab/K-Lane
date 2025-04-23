@@ -19,7 +19,7 @@ net = dict(
 
 pcencoder = dict(
     type='Projector',
-    resnet='resnet34',
+    densenet='densenet121',
     pretrained=False,
     replace_stride_with_dilation=[False, True, False],
     out_conv=True,
