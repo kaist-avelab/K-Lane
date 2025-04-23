@@ -111,7 +111,7 @@ class KLane(Dataset):
         for name_tensor_label in sorted(os.listdir(test_root)):
             temp_data_info = dict()
             time_string = self.get_time_string(name_tensor_label)
-            print("name_tensor_label is", name_tensor_label, "end")
+            # print("name_tensor_label is", name_tensor_label, "end")
             #print("time_string. is",time_string)
             #print("list_time_string is", list_time_string)
 

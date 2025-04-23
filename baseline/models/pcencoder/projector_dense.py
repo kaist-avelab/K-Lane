@@ -13,7 +13,6 @@ model_urls = {
 # TODO is this acceptable registration?
 @PCENCODER.register_module
 class DenseProjector(nn.Module):
-
     def __init__(self,
                  densenet='densenet121',
                  pretrained=False,
@@ -68,8 +67,16 @@ class DenseNetWrapper(nn.Module):
         else:
             self.out = None
 
+        # optional?
+        if replace_stride_with_dilation[1]:
+            self.model.transition2.pool = nn.Identity()
+        if replace_stride_with_dilation[2]:
+            self.model.transition3.pool = nn.Identity()
+
     def forward(self, x):
         x = self.model(x)
         if self.out:
             x = self.out(x)
+
+        # print("[DEBUG] Final output shape:", x.shape)
         return x
