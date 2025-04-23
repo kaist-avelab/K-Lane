@@ -97,4 +97,4 @@ dataset = dict(
         split='test',
     )
 )
-workers=12
+workers=28

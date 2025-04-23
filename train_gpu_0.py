@@ -33,8 +33,8 @@ def main():
     
     runner = Runner(cfg)
 
-    # runner.train()
-    runner.train_small(train_batch=2, valid_samples=40)
+    runner.train()
+    # runner.train_small(train_batch=2, valid_samples=40)
 
 if __name__ == '__main__':
     main()

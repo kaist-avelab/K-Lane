@@ -1,6 +1,6 @@
 # Ignore data and logs folders
 /data
-/venv
+/env
 temp_data_zips/
 
 # Ignore everything in logs
@@ -23,6 +23,7 @@ venv/
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+dummy.py
 
 # System files
 .DS_Store
