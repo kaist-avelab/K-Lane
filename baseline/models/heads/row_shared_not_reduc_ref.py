@@ -15,6 +15,12 @@ from baseline.models.registry import HEADS
 def pair(t):
     return t if isinstance(t, tuple) else (t, t)
 
+"""
+Applies layer normalization before a submodule.
+
+dim: number of features in the last dimension of the input tensor
+dn: some function or module that operates on a normalized input
+"""
 class PreNorm(nn.Module):
     def __init__(self, dim, fn):
         super().__init__()
@@ -23,31 +29,52 @@ class PreNorm(nn.Module):
     def forward(self, x, **kwargs):
         return self.fn(self.norm(x), **kwargs)
 
+"""
+Standard position-wise feed forward network. Applies two linear layers with
+non-linearity in between. The "MLP" of a transformer block, applied after attention
+to allow nonlinear transformation and feature mixing within each token embedding.
+
+dim: dimensionaliy of the input and output
+hidden_dim: intermediate dimensionality fr MLP expansion
+dropout: dropout rate applied after each linear transformation
+"""
 class FeedForward(nn.Module):
     def __init__(self, dim, hidden_dim, dropout = 0.):
         super().__init__()
         self.net = nn.Sequential(
-            nn.Linear(dim, hidden_dim),
-            nn.GELU(),
-            nn.Dropout(dropout),
-            nn.Linear(hidden_dim, dim),
-            nn.Dropout(dropout)
+            nn.Linear(dim, hidden_dim), # project input to higher dimension
+            nn.GELU(),                  # nonlinear activation
+            nn.Dropout(dropout),        # optional dropout for regularization
+            nn.Linear(hidden_dim, dim), # project back to original dimension
+            nn.Dropout(dropout)         # final dropout
         )
     def forward(self, x):
         return self.net(x)
 
+"""
+Defines the multi-head self attention mechanism. Applies scaled dot product with mutliple
+heads, allowing model to capture relationships between tokens.
+
+dim: dimension of input features
+heads: number of attention heads
+dim_head: dimensionality per head
+dropout: dropout probability after output projection
+"""
 class Attention(nn.Module):
     def __init__(self, dim, heads = 8, dim_head = 64, dropout = 0.):
         super().__init__()
-        inner_dim = dim_head *  heads
+        inner_dim = dim_head *  heads # total dimension across all heads
         project_out = not (heads == 1 and dim_head == dim)
 
         self.heads = heads
         self.scale = dim_head ** -0.5
 
         self.attend = nn.Softmax(dim = -1)
+
+        # projects input into query, key, value
         self.to_qkv = nn.Linear(dim, inner_dim * 3, bias = False)
 
+        # combines heads back to dim size, followed by dropout
         self.to_out = nn.Sequential(
             nn.Linear(inner_dim, dim),
             nn.Dropout(dropout)
@@ -65,6 +92,17 @@ class Attention(nn.Module):
         out = rearrange(out, 'b h n d -> b n (h d)')
         return self.to_out(out)
 
+"""
+Standard transformer encoder block implemented with prenorm architecture and 
+residual connections.
+
+dim: input and output dimensionality of the transformer
+depth: number of repeated transformer layers
+heads: number of attention heads
+dim_head: dimensionality of each head
+mlp_dim: hidden dimension of the FFN
+dropout: dropout ate after attention and MLP blocks
+"""
 class Transformer(nn.Module):
     def __init__(self, dim, depth, heads, dim_head, mlp_dim, dropout = 0.):
         super().__init__()
