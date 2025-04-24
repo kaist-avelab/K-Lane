@@ -41,7 +41,7 @@ def build_dataloader(split_cfg, cfg, is_train=True):
     
     data_loader = torch.utils.data.DataLoader(
         dataset, batch_size = cfg.batch_size, shuffle = shuffle,
-        num_workers = cfg.workers, pin_memory = True, persistent_workers = True, drop_last = False,
+        num_workers = cfg.workers, pin_memory = False, persistent_workers = True, drop_last = False,
         worker_init_fn=init_fn)
     
     # replace line 42-45 when RuntimeError('each element in list of batch should be of equal size') happens

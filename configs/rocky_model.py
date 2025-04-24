@@ -20,10 +20,10 @@ net = dict(
 pcencoder = dict(
     type='DenseProjector',
     densenet='densenet121',
-    pretrained=False,
-    replace_stride_with_dilation=[False, True, False],
+    pretrained=True, # prev False
+    replace_stride_with_dilation=[False, True, True],
     out_conv=True,
-    in_channels=[64, 128, 256, -1]
+    in_channels=[64, 128, 256, 1024]
 )
 featuremap_out_channel = 64
 
@@ -35,8 +35,8 @@ list_img_size_xy = [1152, 1152]
 
 backbone = dict(
     type='VitSegNet', # GFC-T
-    image_size=144,
-    patch_size=8,
+    image_size=144, # used to be 144, but densenet downsamples more aggressively 
+    patch_size=8,  # used to be 8
     channels=64,
     dim=512,
     depth=3,
@@ -82,18 +82,18 @@ cls_lane_color = [
 
 optimizer = dict(
   type = 'Adam', #'AdamW',
-  lr = 0.0002,
+  lr = 0.0001,
 )
 
-epochs = 10
-batch_size = 20
+epochs = 20
+batch_size = 8
 total_iter = (2904 // batch_size) * epochs
 scheduler = dict(
     type = 'CosineAnnealingLR',
     T_max = total_iter
 )
 
-eval_ep = 1
+eval_ep = 5
 save_ep = 1
 
 ### Setting Here ###
@@ -115,4 +115,4 @@ dataset = dict(
     )
 )
 
-workers=24
+workers=12
